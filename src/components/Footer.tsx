@@ -1,5 +1,4 @@
-import React from 'react';
-import { Github, Linkedin } from 'lucide-react';
+import { Github, Linkedin, Mail } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -11,11 +10,15 @@ const Footer = () => {
         </div>
         
         <div className="flex items-center gap-6">
-          <a href="https://github.com" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-white transition-colors p-2 hover:bg-white/5 rounded-full">
+          <a href="mailto:devikasingh9d.vhs@gmail.com" className="text-gray-400 hover:text-white transition-colors p-2 hover:bg-white/5 rounded-full" aria-label="Email">
+            <span className="sr-only">Email</span>
+            <Mail size={20} />
+          </a>
+          <a href="https://github.com/devikasingh098" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors p-2 hover:bg-white/5 rounded-full" aria-label="GitHub">
             <span className="sr-only">GitHub</span>
             <Github size={20} />
           </a>
-          <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-[#0077b5] transition-colors p-2 hover:bg-white/5 rounded-full">
+          <a href="https://www.linkedin.com/in/devikasingh098/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#0077b5] transition-colors p-2 hover:bg-white/5 rounded-full" aria-label="LinkedIn">
             <span className="sr-only">LinkedIn</span>
             <Linkedin size={20} />
           </a>

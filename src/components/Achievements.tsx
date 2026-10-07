@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Trophy, Code, Rocket, Star } from 'lucide-react';
 
@@ -17,7 +16,8 @@ const achievements = [
     type: "hackathon",
     icon: <Rocket className="text-purple-400" size={24} />,
     color: "from-purple-500/20 to-indigo-500/20",
-    border: "border-purple-500/30"
+    border: "border-purple-500/30",
+    link: "https://lablab.ai/ai-hackathons/assemblyai-voice-agent-hackathon"
   },
   {
     title: "AI/ML & Full-Stack Projects",
@@ -71,25 +71,47 @@ const Achievements = () => {
 
               {/* Content Card */}
               <div className={`md:w-1/2 ${idx % 2 === 0 ? 'md:pr-12 md:text-right' : 'md:pl-12 md:ml-auto'}`}>
-                <div className={`glass-card p-6 rounded-2xl bg-gradient-to-br ${item.color} ${item.border} hover:-translate-y-1 transition-transform duration-300 relative overflow-hidden`}>
-                  <div className="absolute inset-0 bg-black/40 -z-10 group-hover:bg-black/20 transition-colors duration-500"></div>
-                  
-                  <div className={`flex items-center gap-4 mb-3 ${idx % 2 === 0 ? 'md:justify-end' : ''}`}>
-                    {idx % 2 !== 0 && <div className="p-2 bg-white/10 rounded-lg shrink-0">{item.icon}</div>}
-                    <h3 className="text-xl font-bold text-white">{item.title}</h3>
-                    {idx % 2 === 0 && <div className="p-2 bg-white/10 rounded-lg shrink-0 hidden md:block">{item.icon}</div>}
-                  </div>
-                  
-                  <p className="text-gray-400 font-medium">{item.subtitle}</p>
-                  
-                  {item.type === 'hackathon' && (
-                    <div className={`mt-4 flex ${idx % 2 === 0 ? 'md:justify-end' : ''}`}>
-                      <span className="inline-flex animate-pulse items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-white/10 text-white border border-white/20">
-                        <Sparkles size={12} className="text-yellow-400" /> Hackathon Highlight
-                      </span>
+                {item.link ? (
+                  <a href={item.link} target="_blank" rel="noopener noreferrer" className={`block glass-card p-6 rounded-2xl bg-gradient-to-br ${item.color} ${item.border} hover:-translate-y-1 transition-transform duration-300 relative overflow-hidden`}>
+                    <div className="absolute inset-0 bg-black/40 -z-10 group-hover:bg-black/20 transition-colors duration-500"></div>
+                    
+                    <div className={`flex items-center gap-4 mb-3 ${idx % 2 === 0 ? 'md:justify-end' : ''}`}>
+                      {idx % 2 !== 0 && <div className="p-2 bg-white/10 rounded-lg shrink-0">{item.icon}</div>}
+                      <h3 className="text-xl font-bold text-white group-hover:text-primary transition-colors">{item.title}</h3>
+                      {idx % 2 === 0 && <div className="p-2 bg-white/10 rounded-lg shrink-0 hidden md:block">{item.icon}</div>}
                     </div>
-                  )}
-                </div>
+                    
+                    <p className="text-gray-400 font-medium">{item.subtitle}</p>
+                    
+                    {item.type === 'hackathon' && (
+                      <div className={`mt-4 flex ${idx % 2 === 0 ? 'md:justify-end' : ''}`}>
+                        <span className="inline-flex animate-pulse items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-white/10 text-white border border-white/20">
+                          <Sparkles size={12} className="text-yellow-400" /> Hackathon Highlight
+                        </span>
+                      </div>
+                    )}
+                  </a>
+                ) : (
+                  <div className={`glass-card p-6 rounded-2xl bg-gradient-to-br ${item.color} ${item.border} hover:-translate-y-1 transition-transform duration-300 relative overflow-hidden`}>
+                    <div className="absolute inset-0 bg-black/40 -z-10 group-hover:bg-black/20 transition-colors duration-500"></div>
+                    
+                    <div className={`flex items-center gap-4 mb-3 ${idx % 2 === 0 ? 'md:justify-end' : ''}`}>
+                      {idx % 2 !== 0 && <div className="p-2 bg-white/10 rounded-lg shrink-0">{item.icon}</div>}
+                      <h3 className="text-xl font-bold text-white">{item.title}</h3>
+                      {idx % 2 === 0 && <div className="p-2 bg-white/10 rounded-lg shrink-0 hidden md:block">{item.icon}</div>}
+                    </div>
+                    
+                    <p className="text-gray-400 font-medium">{item.subtitle}</p>
+                    
+                    {item.type === 'hackathon' && (
+                      <div className={`mt-4 flex ${idx % 2 === 0 ? 'md:justify-end' : ''}`}>
+                        <span className="inline-flex animate-pulse items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-white/10 text-white border border-white/20">
+                          <Sparkles size={12} className="text-yellow-400" /> Hackathon Highlight
+                        </span>
+                      </div>
+                    )}
+                  </div>
+                )}
               </div>
             </motion.div>
           ))}

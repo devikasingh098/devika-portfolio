@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Github, Linkedin, Mail, ArrowRight } from 'lucide-react';
 
@@ -80,13 +79,13 @@ const Hero = () => {
           transition={{ duration: 1, delay: 0.8 }}
           className="flex items-center justify-center gap-6 text-gray-400"
         >
-          <a href="https://github.com" target="_blank" rel="noreferrer" className="hover:text-white hover:-translate-y-1 transition-all">
+          <a href="https://github.com/devikasingh098" target="_blank" rel="noopener noreferrer" className="hover:text-white hover:-translate-y-1 transition-all" aria-label="GitHub">
             <Github size={24} />
           </a>
-          <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="hover:text-[#0077b5] hover:-translate-y-1 transition-all">
+          <a href="https://www.linkedin.com/in/devikasingh098/" target="_blank" rel="noopener noreferrer" className="hover:text-[#0077b5] hover:-translate-y-1 transition-all" aria-label="LinkedIn">
             <Linkedin size={24} />
           </a>
-          <a href="mailto:hello@example.com" className="hover:text-primary hover:-translate-y-1 transition-all">
+          <a href="mailto:devikasingh9d.vhs@gmail.com" className="hover:text-primary hover:-translate-y-1 transition-all" aria-label="Email">
             <Mail size={24} />
           </a>
         </motion.div>

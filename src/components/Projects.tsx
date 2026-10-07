@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { ExternalLink, Github, Trophy } from 'lucide-react';
 
@@ -8,8 +7,8 @@ const projects = [
     description: "An AI-powered voice interview coach that conducts realistic mock interviews, provides live transcription, and generates structured performance feedback.",
     tech: ["React", "TypeScript", "Vite", "Tailwind CSS", "AssemblyAI", "Gemini", "Supabase"],
     highlight: "AssemblyAI Voice Agent Hackathon",
-    github: "#",
-    live: "#",
+    github: "https://github.com/devikasingh098/InterviewAi",
+    live: "https://interview-ai-five-beta.vercel.app/",
     gradient: "from-indigo-500/20 to-purple-500/20"
   },
   {
@@ -17,24 +16,24 @@ const projects = [
     description: "An AI-powered packaging verification system that analyzes outbound boxes against expected orders and identifies missing, incorrect, extra, or uncertain items.",
     tech: ["Python", "Flask", "Gemini", "AI Agents"],
     highlight: "CUBE 2026 Final Round",
-    github: "#",
-    live: "#",
+    github: "https://github.com/devikasingh098/cube26-pck-0085-devikasingh098",
+    live: "https://cube26-pck-0085-devikasingh098.vercel.app/",
     gradient: "from-emerald-500/20 to-teal-500/20"
   },
   {
     title: "AI College Chatbot",
     description: "An AI chatbot designed to help college students access information and interact with a college-focused assistant.",
     tech: ["Python", "Gemini", "Flask"],
-    github: "#",
-    live: "#",
+    github: "",
+    live: "",
     gradient: "from-blue-500/20 to-cyan-500/20"
   },
   {
     title: "Clothing Store",
     description: "A responsive e-commerce style clothing website built as a frontend web project with modern UI principles.",
     tech: ["HTML", "CSS", "Tailwind CSS"],
-    github: "#",
-    live: "#",
+    github: "",
+    live: "",
     gradient: "from-orange-500/20 to-red-500/20"
   }
 ];
@@ -88,12 +87,16 @@ const Projects = () => {
                 </div>
                 
                 <div className="flex gap-4 mt-auto">
-                  <a href={project.live} className="flex items-center gap-2 px-4 py-2 bg-primary hover:bg-primary/80 text-white text-sm font-medium rounded-lg transition-colors">
-                    <ExternalLink size={16} /> Live Demo
-                  </a>
-                  <a href={project.github} className="flex items-center gap-2 px-4 py-2 glass hover:bg-white/10 text-white text-sm font-medium rounded-lg transition-colors">
-                    <Github size={16} /> GitHub
-                  </a>
+                  {project.live && (
+                    <a href={project.live} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-4 py-2 bg-primary hover:bg-primary/80 text-white text-sm font-medium rounded-lg transition-colors">
+                      <ExternalLink size={16} /> Live Demo
+                    </a>
+                  )}
+                  {project.github && (
+                    <a href={project.github} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-4 py-2 glass hover:bg-white/10 text-white text-sm font-medium rounded-lg transition-colors">
+                      <Github size={16} /> GitHub
+                    </a>
+                  )}
                 </div>
               </div>
             </motion.div>

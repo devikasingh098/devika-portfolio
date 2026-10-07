@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Github, Linkedin, ArrowUpRight } from 'lucide-react';
 
@@ -23,25 +22,25 @@ const Contact = () => {
 
         <div className="flex flex-col sm:flex-row justify-center items-center gap-6">
           <a
-            href="mailto:hello@example.com"
+            href="mailto:devikasingh9d.vhs@gmail.com"
             className="group flex items-center justify-center gap-2 px-8 py-4 bg-white text-black hover:bg-gray-200 rounded-full font-bold text-lg w-full sm:w-auto transition-transform hover:scale-105 active:scale-95"
           >
             <Mail size={20} /> Email Me
           </a>
           
           <a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/devikasingh098/"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             className="group flex items-center justify-center gap-2 px-8 py-4 glass border border-white/20 hover:bg-white/10 rounded-full font-bold text-lg w-full sm:w-auto transition-transform hover:scale-105 active:scale-95"
           >
             <Linkedin size={20} className="text-[#0077b5]" /> LinkedIn <ArrowUpRight size={18} className="opacity-50 group-hover:opacity-100 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />
           </a>
           
           <a
-            href="https://github.com"
+            href="https://github.com/devikasingh098"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             className="group flex items-center justify-center gap-2 px-8 py-4 glass border border-white/20 hover:bg-white/10 rounded-full font-bold text-lg w-full sm:w-auto transition-transform hover:scale-105 active:scale-95"
           >
             <Github size={20} /> GitHub <ArrowUpRight size={18} className="opacity-50 group-hover:opacity-100 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />
